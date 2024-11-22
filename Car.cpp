@@ -1,6 +1,11 @@
 #include "Car.h"
 
-void Car::?????Assign()
+
+Car::Car()
+{
+}
+
+void Car::Assign()
 {
 }
 

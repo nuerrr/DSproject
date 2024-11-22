@@ -1,11 +1,10 @@
 #pragma once
 #include <iostream>
 #include"Patient.h"
-#include"Hospital.h"
 #include "Project allowed DS/LinkedQueue.h"
 #include "Project allowed DS/priQueue.h"
 
-enum type {
+enum CarType {
 	SC, //special car
 	NC  //normal car
 };
@@ -14,14 +13,17 @@ enum status {
 	Assigned,
 	Loaded
 };
+
+
 class Car
 {
 	int carSpeed;
-	type T;
+	CarType T;
 	status S;
 	Patient* P;
 
 public:
+	Car();
 	void Assign();
 	void Load();
 	void deLoad();

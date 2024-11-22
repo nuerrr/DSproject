@@ -21,7 +21,7 @@ private:
 	
 
 public:
-	Organizer(int numHospitals) {};
+	Organizer(int numHospitals);
 
 	void setDistance(int hospital1, int hospital2, int distance);
 

@@ -139,8 +139,10 @@
     <ClInclude Include="Hospital.h" />
     <ClInclude Include="Organizer.h" />
     <ClInclude Include="Patient.h" />
+    <ClInclude Include="PriQueueExtended.h" />
     <ClInclude Include="Project allowed DS\LinkedQueue.h" />
     <ClInclude Include="Project allowed DS\priQueue.h" />
+    <ClInclude Include="QueueDerived.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
