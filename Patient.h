@@ -8,10 +8,19 @@ enum type {
 
 class Patient
 {
+	int ID; //patient ID
 	int RT; //Request time
 	int PT; //pickup time
 	int NH;	//Nearest hospital ID to patient
 	int DNH;//Distance to nearest hospital (from patient)
 	type T;
+public:
+	Patient(int id,int rt,int nh,int dnh) {
+		ID = id;
+		RT = rt;
+		NH = nh;
+		DNH = dnh;
+	}
+
 };
 
