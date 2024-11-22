@@ -6,6 +6,8 @@
 #include"Hospital.h"
 #include "Project allowed DS/LinkedQueue.h"
 #include "Project allowed DS/priQueue.h"
+#include "PriQueueExtended.h"
+
 
 using namespace std;
 
@@ -16,6 +18,7 @@ private:
 	LinkedQueue<Patient> PR;//patient requests
 	LinkedQueue<int> CL; //cancellation list
 	Hospital* hospital; //hospital list
+	PriQueueExtended<Car>OC; //out cars 
 	priQueue<Car>BC; //back car
 	LinkedQueue<int> FL; //finished list
 	
