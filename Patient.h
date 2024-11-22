@@ -15,12 +15,7 @@ class Patient
 	int DNH;//Distance to nearest hospital (from patient)
 	type T;
 public:
-	Patient(int id,int rt,int nh,int dnh) {
-		ID = id;
-		RT = rt;
-		NH = nh;
-		DNH = dnh;
-	}
-
+	Patient(int id, int rt, int nh, int dnh);
+	Patient();
 };
 
