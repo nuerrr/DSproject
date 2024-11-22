@@ -10,27 +10,23 @@ public:
 
     }
     bool Cancel(int ID) {
-        if (isEmpty())
+        if (this->isEmpty())  // Explicitly use `this` to access inherited members
             return false;
 
         Node<T>* prevPtr = nullptr;
-        Node<T>* currPtr = frontPtr;
+        Node<T>* currPtr = this->frontPtr; // Explicitly use `this`
 
-        while (currPtr != nullptr)
-        {
-            if (currPtr->getItem() == itemToRemove)
-            {
-                if (prevPtr == nullptr) // Case for the first node 
-                {
-                    frontPtr = currPtr->getNext();
-                    if (frontPtr == nullptr) // If it's the last node
-                        backPtr = nullptr;
+        while (currPtr != nullptr) {
+            if (currPtr->getItem()->getID() == ID) { // Assuming `getItem()` returns a pointer with `getID()` method
+                if (prevPtr == nullptr) { // Case for the first node
+                    this->frontPtr = currPtr->getNext(); // Explicitly use `this`
+                    if (this->frontPtr == nullptr) // If it's the last node
+                        this->backPtr = nullptr;  // Explicitly use `this`
                 }
-                else
-                {
+                else {
                     prevPtr->setNext(currPtr->getNext());
-                    if (currPtr == backPtr) // If it's the last node
-                        backPtr = prevPtr;
+                    if (currPtr == this->backPtr) // If it's the last node
+                        this->backPtr = prevPtr;  // Explicitly use `this`
                 }
                 delete currPtr;
                 return true;
@@ -41,4 +37,5 @@ public:
 
         return false; // Item not found
     }
+
 };

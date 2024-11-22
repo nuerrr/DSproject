@@ -11,3 +11,8 @@ Patient::Patient(int id, int rt, int nh, int dnh)
 Patient::Patient()
 {
 }
+
+int Patient::getID()
+{
+	return ID;
+}

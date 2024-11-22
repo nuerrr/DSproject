@@ -17,5 +17,6 @@ class Patient
 public:
 	Patient(int id, int rt, int nh, int dnh);
 	Patient();
+	int getID();
 };
 
