@@ -56,5 +56,11 @@
     <ClInclude Include="Project allowed DS\priQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="QueueDerived.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PriQueueExtended.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
