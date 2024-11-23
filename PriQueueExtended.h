@@ -3,19 +3,18 @@
 
 
 template<typename T>
-class PriQueueExtended : public  priQueue<T> {
+class PriQueueExtended : public priQueue<T> {
 
 
 public:
-    PriQueueExtended() :priQueue() {
+    PriQueueExtended(){}
 
-    }
     bool Cancel(int ID) {
-        if (isEmpty())
+        if (this->isEmpty())
             return false;
 
         Node<T>* prevPtr = nullptr;
-        Node<T>* currPtr = Head;
+        Node<T>* currPtr = this->head;
 
         while (currPtr != nullptr)
         {
@@ -23,7 +22,7 @@ public:
             {
                 if (prevPtr == nullptr) // Case for the first node 
                 {
-                    frontPtr = currPtr->getNext();
+                    this->head = currPtr->getNext();
                     
                 }
                 else
