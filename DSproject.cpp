@@ -3,8 +3,9 @@
 
 int main()
 {
-	Organizer O(10);
-
+	Organizer O;
+	
+	O.ReadFile("C:/Users/Kerdawy/Documents/GitHub/DSproject/Sample.txt");
 
 
 }

@@ -7,7 +7,7 @@
 #include "Project allowed DS/LinkedQueue.h"
 #include "Project allowed DS/priQueue.h"
 #include "PriQueueExtended.h"
-
+#include <fstream>
 
 using namespace std;
 
@@ -24,9 +24,13 @@ private:
 	
 
 public:
-	Organizer(int numHospitals);
+	Organizer();
+
+	void setHospital(int numHospitals);
 
 	void setDistance(int hospital1, int hospital2, int distance);
+
+	bool ReadFile(string FileName);
 
 
 };

@@ -1,7 +1,12 @@
 #include "Organizer.h"
 
-Organizer::Organizer(int numHospitals) {
-	distanceMatrix.resize(numHospitals, vector<int>(numHospitals, 0));
+Organizer::Organizer() {
+}
+
+void Organizer::setHospital(int numHospitals)
+{
+    distanceMatrix.resize(numHospitals, vector<int>(numHospitals, 0));
+
 }
 
 void Organizer::setDistance(int hospital1, int hospital2, int distance) {
@@ -12,4 +17,33 @@ void Organizer::setDistance(int hospital1, int hospital2, int distance) {
     else {
         cout << "Invalid hospital indices." << endl;
     }
+}
+
+bool Organizer::ReadFile(string FileName)
+{
+    //variables
+    int H_num;
+    int Scar_speed;
+    int Ncar_speed;
+
+    ifstream file(FileName);
+
+    if (!file) {
+        std::cerr << "Unable to open file\n";
+        return false;
+    }
+    file >> H_num;
+    cout <<"hospital number: "<< H_num;
+
+    setHospital(H_num);
+
+    file >> Scar_speed;
+    file >> Ncar_speed;
+
+    cout << "\nScar speed: " << Scar_speed;
+    cout << "\nNcar speed: " << Ncar_speed;
+
+    //for(int i=0; i<H_num; )
+
+
 }
